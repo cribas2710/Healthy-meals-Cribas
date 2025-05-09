@@ -2,20 +2,99 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Wrap de Pollo</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 90%;
+      max-width: 600px;
+      padding: 20px;
+    }
+
+    h1 {
+      color: #2d2d2d;
+      text-align: center;
+      font-size: 2.5em;
+    }
+
+    img {
+      display: block;
+      margin: 0 auto 20px;
+      border-radius: 8px;
+      width: 100%;
+      max-width: 300px;
+    }
+
+    h3 {
+      font-size: 1.5em;
+      color: #4caf50;
+      margin-bottom: 10px;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    li {
+      background-color: #f9f9f9;
+      margin: 5px 0;
+      padding: 10px;
+      border-radius: 5px;
+      font-size: 1.1em;
+    }
+
+    p {
+      font-size: 1.2em;
+      line-height: 1.5;
+      color: #555;
+    }
+
+    .qr-code {
+      display: block;
+      margin: 30px auto;
+      text-align: center;
+    }
+
+    .qr-code img {
+      max-width: 150px;
+    }
+  </style>
 </head>
 <body>
-  <h1>Wrap de Pollo</h1>
-  <img src="https://tulink.com/foto.jpg" alt="Wrap de pollo" width="300" />
-  <h3>Información nutricional</h3>
-  <ul>
-    <li>Calorías: 420 kcal</li>
-    <li>Proteínas: 34 g</li>
-    <li>Grasas: 18 g</li>
-    <li>Carbohidratos: 28 g</li>
-  </ul>
-  <p>Ingredientes: 120 g de pechuga, tortilla integral, pepino, ranch, lechuga, cebolla, queso mozzarella, especias.</p>
+  <div class="container">
+    <h1>Wrap de Pollo</h1>
+    <img src="https://tulink.com/foto.jpg" alt="Wrap de pollo">
+    
+    <h3>Información nutricional</h3>
+    <ul>
+      <li>Calorías: 420 kcal</li>
+      <li>Proteínas: 34 g</li>
+      <li>Grasas: 18 g</li>
+      <li>Carbohidratos: 28 g</li>
+    </ul>
+
+    <p>Ingredientes: 120 g de pechuga, tortilla integral, pepino, ranch, lechuga, cebolla, queso mozzarella, especias.</p>
+
+    <!-- Aquí agregas el código QR -->
+    <div class="qr-code">
+      <img src="https://api.qrserver.com/v1/create-qr-code/?data=https://tu-link-de-macros.com&size=150x150" alt="Código QR">
+      <p>Escanea el QR para ver más detalles sobre los macros de este platillo.</p>
+    </div>
+  </div>
 </body>
 </html>
-“Agregando página wrap de pollo”
-
