@@ -2,98 +2,126 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Wrap de Pollo</title>
+  <title>WRAP DE POLLO</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: 'Arial', sans-serif;
-      background-color: #f4f4f4;
       margin: 0;
-      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff;
+      color: #333;
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
+      min-height: 100vh;
     }
 
-    .container {
-      background-color: white;
+    .card {
+      width: 360px;
+      background: #fff;
+      text-align: center;
+      position: relative;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
       border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      width: 90%;
-      max-width: 600px;
-      padding: 20px;
+      overflow: hidden;
     }
 
     h1 {
-      color: #2d2d2d;
-      text-align: center;
-      font-size: 2.5em;
+      font-size: 1.4em;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin: 20px 0 10px 0;
+      color: #333;
     }
 
-    img {
-      display: block;
-      margin: 0 auto 20px;
-      border-radius: 8px;
-      width: 100%;
-      max-width: 300px;
-    }
-
-    h3 {
-      font-size: 1.5em;
-      color: #4caf50;
+    .food-img {
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      object-fit: cover;
       margin-bottom: 10px;
     }
 
-    ul {
-      list-style-type: none;
-      padding: 0;
+    .macro-section {
+      display: flex;
+      justify-content: space-around;
+      margin: 10px 0 20px 0;
+      font-size: 0.9em;
     }
 
-    li {
-      background-color: #f9f9f9;
-      margin: 5px 0;
-      padding: 10px;
-      border-radius: 5px;
-      font-size: 1.1em;
+    .macro {
+      display: flex;
+      flex-direction: column;
+      font-weight: bold;
     }
 
-    p {
+    .macro span {
       font-size: 1.2em;
-      line-height: 1.5;
+      font-weight: normal;
       color: #555;
     }
 
-    .qr-code {
-      display: block;
-      margin: 30px auto;
-      text-align: center;
+    .calories-box {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 0;
+      border-left: 120px solid #2f66b6;
+      border-top: 120px solid transparent;
+      color: white;
+      font-weight: bold;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      padding-left: 5px;
     }
 
-    .qr-code img {
-      max-width: 150px;
+    .calories-text {
+      position: absolute;
+      bottom: 8px;
+      left: 8px;
+      color: white;
+      font-size: 0.8em;
+      text-align: left;
+      line-height: 1.1;
+    }
+
+    .calories-text span {
+      font-size: 1.8em;
+      display: block;
+      font-weight: bold;
+    }
+
+    .ingredientes {
+      font-size: 0.85em;
+      padding: 0 20px 20px;
+      color: #666;
     }
   </style>
 </head>
 <body>
-  <div class="container">
+  <div class="card">
     <h1>Wrap de Pollo</h1>
-    <img src="https://d36fw6y2wq3bat.cloudfront.net/recipes/wraps-de-pollo-con-lechuga-y-zanahoria/300/wraps-de-pollo-con-lechuga-y-zanahoria_version_1705377714.jpg" alt="Wrap de pollo">
-    
-    <h3>Información nutricional</h3>
-    <ul>
-      <li>Calorías: 420 kcal</li>
-      <li>Proteínas: 34 g</li>
-      <li>Grasas: 18 g</li>
-      <li>Carbohidratos: 28 g</li>
-    </ul>
+    <img class="food-img" src="https://resuelveconbimbo-com-v2-assets.s3.amazonaws.com/s3fs-public/2024-01/Banner%20Desktop_Wrap%20de%20Pollo.webp?VersionId=Gi5bWLFSfFnCTn80o5DrZEklPfhs8l3q" alt="Wrap de pollo">
 
-    <p>Ingredientes: 120 g de pechuga, tortilla integral, pepino, ranch, lechuga, cebolla, queso mozzarella, especias.</p>
+    <div class="macro-section">
+      <div class="macro">Grasa<span>18g</span></div>
+      <div class="macro">Carbs<span>28g</span></div>
+      <div class="macro">Proteína<span>34g</span></div>
+    </div>
 
-    <!-- Aquí agregas el código QR -->
-    <div class="qr-code">
-      <img src="https://api.qrserver.com/v1/create-qr-code/?data=https://tu-link-de-macros.com&size=150x150" alt="Código QR">
-      <p>Escanea el QR para ver más detalles sobre los macros de este platillo.</p>
+    <div class="ingredientes">
+      Ingredientes: 120 g de pechuga, tortilla integral, pepino, ranch, lechuga, cebolla, queso mozzarella, especias.
+    </div>
+
+    <div class="calories-box"></div>
+    <div class="calories-text">
+      Calorías<br>
+      <span>420</span>
     </div>
   </div>
 </body>
